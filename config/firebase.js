@@ -1,0 +1,6 @@
+exports.FIREBASE_API_KEY = 'AIzaSyB6LZP33hVbV0GWxQGlb6dDB80HbfD3WHs'
+exports.FIREBASE_AUTH_DOMAIN = 'ben-tatum-api-14f7e.firebaseapp.com'
+exports.FIREBASE_DATABASE_URL = 'https://ben-tatum-api-14f7e.firebaseio.com'
+exports.FIREBASE_STORAGE_BUCKET = 'ben-tatum-api-14f7e.appspot.com'
+exports.FIREBASE_PROJECT_ID = 'ben-tatum-api-14f7e'
+exports.FIREBASE_MESSAGING_SENDER_ID = '906647906325'
