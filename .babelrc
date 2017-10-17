@@ -1,9 +1,7 @@
 {
   "plugins": [
-    [
-      "module-resolver",
-      { "root": ["./"] }
-    ]
+    ["module-resolver", { "root": ["./"] }],
+    "jsx-control-statements"
   ],
   "env": {
     "development": {

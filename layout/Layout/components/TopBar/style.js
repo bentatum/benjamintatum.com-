@@ -4,6 +4,11 @@ export default theme => ({
     marginLeft: theme.spacing.unit
   },
   img: {
-    height: 48
+    height: 42
+  },
+  iconTitleWrapper: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center'
   }
 })

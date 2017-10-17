@@ -1,10 +1,10 @@
 
 import { Layout } from 'layout'
 import { withRedux } from 'lib'
-import { withRoot } from 'components'
+import { withMUI } from 'components'
 import { mapStore, getInitialProps } from './lib'
 import Typography from 'material-ui/Typography'
-import { setStatic, pure, compose } from 'recompact'
+import { setStatic, compose } from 'recompact'
 import { markdown } from 'markdown'
 import { withStyles } from 'material-ui/styles'
 
@@ -12,8 +12,7 @@ const enhance = compose(
   withStyles(require('./style').default),
   withRedux(mapStore),
   setStatic('getInitialProps', getInitialProps),
-  withRoot,
-  pure
+  withMUI
 )
 
 export default enhance(({ classes, content }) =>

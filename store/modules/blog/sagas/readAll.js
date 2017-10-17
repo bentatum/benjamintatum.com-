@@ -1,5 +1,5 @@
 import { graphqlClient } from 'lib'
-import { call, put } from 'redux-saga/effects'
+import { all, call, put } from 'redux-saga/effects'
 import { pending, success, failure, error } from 'store/modules/async/actions'
 import { READ_ALL } from '../actionTypes'
 import { set } from '../actions'
@@ -11,7 +11,7 @@ export default function * (action) {
 
     const query = `
       {
-        posts {
+        posts(published: true) {
           body
           title
           slug
@@ -28,10 +28,14 @@ export default function * (action) {
 
     const posts = compact(res.data.data.posts)
 
-    yield put(success(READ_ALL))
-    yield put(set({ list: posts }))
+    yield all([
+      put(set({ posts })),
+      put(success(READ_ALL))
+    ])
   } catch (err) {
-    yield put(error(READ_ALL, err))
-    yield put(failure(READ_ALL))
+    yield all([
+      put(error(READ_ALL, err)),
+      put(failure(READ_ALL))
+    ])
   }
 }

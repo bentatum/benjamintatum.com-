@@ -1,1 +1,1 @@
-export { default as withRoot } from './withRoot'
+export withMUI from './withMUI'

@@ -1,7 +1,7 @@
 import { get } from 'lodash'
 import { readAll, readOne } from 'store/modules/blog/actions'
 
-export default async ({ store, req, query }) => {
+export default async ({ store, query }) => {
   const { post } = query
 
   if (post) {
@@ -9,6 +9,4 @@ export default async ({ store, req, query }) => {
   } else {
     await store.dispatch(readAll())
   }
-
-  return {}
 }

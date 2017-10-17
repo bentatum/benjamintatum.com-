@@ -2,6 +2,6 @@
 import { get } from 'lodash'
 
 export default store => ({
-  posts: get(store, 'blog.list'),
-  post: get(store, 'blog.single')
+  posts: get(store, 'blog.posts'),
+  post: get(store, 'blog.post')
 })

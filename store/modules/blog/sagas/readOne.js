@@ -28,7 +28,7 @@ export default function * ({ payload }) {
     const { post } = res.data.data
 
     yield put(success(READ_ONE))
-    yield put(set({ single: post }))
+    yield put(set({ post }))
   } catch (err) {
     yield put(error(READ_ONE, err))
     yield put(failure(READ_ONE))
