@@ -10,6 +10,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "express": "^4.16.1",
     "faker": "^4.1.0",
+    "firebase": "^4.5.2",
     "markdown": "^0.5.0",
     "material-ui": "next",
     "next": "^3.2.2",

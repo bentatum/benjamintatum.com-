@@ -1,4 +1,4 @@
-exports.FIREBASE_API_KEY = 'AIzaSyB6LZP33hVbV0GWxQGlb6dDB80HbfD3WHs'
+exports.FIREBASE_API_KEY = 'AIzaSyCklQP_9pNZSQeoDivBaRxquUZdwmEH65w'
 exports.FIREBASE_AUTH_DOMAIN = 'ben-tatum-api-14f7e.firebaseapp.com'
 exports.FIREBASE_DATABASE_URL = 'https://ben-tatum-api-14f7e.firebaseio.com'
 exports.FIREBASE_STORAGE_BUCKET = 'ben-tatum-api-14f7e.appspot.com'

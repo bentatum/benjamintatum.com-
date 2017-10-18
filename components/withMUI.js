@@ -25,8 +25,8 @@ let AppWrapper = props => props.children
 
 AppWrapper = withStyles(styles)(AppWrapper)
 
-export default function withMUI (BaseComponent) {
-  class WithMUI extends Component {
+function withRoot (BaseComponent) {
+  class WithRoot extends Component {
     static getInitialProps (ctx) {
       if (BaseComponent.getInitialProps) {
         return BaseComponent.getInitialProps(ctx)
@@ -72,8 +72,10 @@ export default function withMUI (BaseComponent) {
   }
 
   if (process.env.NODE_ENV !== 'production') {
-    WithMUI.displayName = wrapDisplayName(BaseComponent, 'withRoot')
+    WithRoot.displayName = wrapDisplayName(BaseComponent, 'withRoot')
   }
 
-  return WithMUI
+  return WithRoot
 }
+
+export default withRoot

@@ -8,7 +8,7 @@ const enhance = withMUI
 export default enhance(() =>
   <Layout>
     <Typography>
-      Hello! I'm Ben Tatum, this is my website.
+      Hey, I'm Ben Tatum! This is my website.
     </Typography>
   </Layout>
 )

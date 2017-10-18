@@ -1,1 +1,6 @@
+export TextInput from './TextInput'
+export withRedux from './withRedux'
 export withMUI from './withMUI'
+export Switch from './Switch'
+export Select from './Select'
+export Checkbox from './Checkbox'

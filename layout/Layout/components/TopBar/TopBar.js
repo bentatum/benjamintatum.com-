@@ -14,7 +14,7 @@ export default enhance(
     <AppBar className={className} position='static' color='default'>
       <Toolbar>
         <div className={classes.iconTitleWrapper}>
-          <IconButton disableRipple onClick={() => Router.push('/blog')}>
+          <IconButton disableRipple onClick={() => Router.push('/home', '/')}>
             <img src='/static/ben-smile.png' className={classes.img} />
           </IconButton>
           <If condition={title}>
@@ -28,6 +28,9 @@ export default enhance(
         </Button>
         <Button onClick={() => Router.push('/about')}>
           About
+        </Button>
+        <Button onClick={() => Router.push('/resume')}>
+          Resume
         </Button>
       </Toolbar>
     </AppBar>
