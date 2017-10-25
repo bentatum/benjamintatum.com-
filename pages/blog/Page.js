@@ -1,10 +1,10 @@
 
 import { Layout } from 'layout'
 import { withStyles } from 'material-ui/styles'
-import { renderComponent, branch, setStatic, compose } from 'recompact'
+import { setStatic, compose } from 'recompact'
 import { withRedux } from 'lib'
-import { Error404, withMUI } from 'components'
-import { should404, mapStore, getInitialProps } from './lib'
+import { withMUI } from 'components'
+import { mapStore, getInitialProps } from './lib'
 import Link from 'next/link'
 import { Post, PostPreviewList } from './components'
 import { markdown } from 'markdown'
@@ -13,7 +13,6 @@ import Typography from 'material-ui/Typography'
 const enhance = compose(
   withRedux(mapStore),
   setStatic('getInitialProps', getInitialProps),
-  branch(should404, renderComponent(<Error404 />)),
   withMUI,
   withStyles(require('./style').default)
 )
