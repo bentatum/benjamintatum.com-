@@ -15,6 +15,10 @@ export default function * ({ payload }) {
           slug
           created
           body
+          image
+          type {
+            slug
+          }
         }
       }
     `

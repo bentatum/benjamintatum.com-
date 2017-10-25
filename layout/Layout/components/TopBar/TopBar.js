@@ -11,7 +11,7 @@ const enhance = withStyles(require('./style').default)
 
 export default enhance(
   ({ className, children, classes, title, onMenuClick }) => (
-    <AppBar className={className} position='static' color='default'>
+    <AppBar classes={{ root: className }} position='static' color='default'>
       <Toolbar>
         <div className={classes.iconTitleWrapper}>
           <IconButton disableRipple onClick={() => Router.push('/home', '/')}>

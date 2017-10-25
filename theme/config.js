@@ -24,5 +24,10 @@ export const overrides = {
       width: 19,
       fontSize: 10
     }
+  },
+  MuiAppBar: {
+    root: {
+      boxShadow: 'none'
+    }
   }
 }

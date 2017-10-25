@@ -1,0 +1,2 @@
+
+export propsMap from './propsMap'
