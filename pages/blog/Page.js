@@ -19,6 +19,7 @@ const enhance = compose(
 
 export default enhance(({ classes, post, posts, url }) =>
   <Layout
+    url={url}
     post={post}
     topBar={{
       title: 'Ben\'s Blog',

@@ -1,9 +1,7 @@
 
 import { markdown } from 'markdown'
 import Typography from 'material-ui/Typography'
-import { mapProps } from 'recompact'
 import { withStyles } from 'material-ui/styles'
-import { propsMap } from './lib'
 
 const enhance = withStyles(require('./style').default)
 
