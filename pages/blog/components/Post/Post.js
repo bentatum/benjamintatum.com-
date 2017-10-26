@@ -9,8 +9,8 @@ const enhance = withStyles(require('./style').default)
 export default enhance(({ classes, post }) =>
   <div className={classes[`post-type-${get(post, 'type.slug')}`]}>
     <Typography type='title' color='inherit'>
-      {post.title}
+      {get(post, 'title')}
     </Typography>
-    <div dangerouslySetInnerHTML={{ __html: markdown.toHTML(post.body) }} />
+    <div dangerouslySetInnerHTML={{ __html: markdown.toHTML(get(post, 'body', '')) }} />
   </div>
 )

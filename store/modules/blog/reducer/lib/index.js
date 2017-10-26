@@ -1,0 +1,1 @@
+export mapReadOne from './mapReadOne'

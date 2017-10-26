@@ -1,10 +1,11 @@
 
+import { get } from 'lodash'
 import { Layout } from 'layout'
 import { withStyles } from 'material-ui/styles'
-import { setStatic, compose } from 'recompact'
+import { mapProps, setStatic, compose } from 'recompact'
 import { withRedux } from 'lib'
 import { withMUI } from 'components'
-import { mapStore, getInitialProps } from './lib'
+import { propsMap, mapStore, getInitialProps } from './lib'
 import Link from 'next/link'
 import { Post, PostPreviewList } from './components'
 import { markdown } from 'markdown'
@@ -14,18 +15,19 @@ const enhance = compose(
   withRedux(mapStore),
   setStatic('getInitialProps', getInitialProps),
   withMUI,
-  withStyles(require('./style').default)
+  withStyles(require('./style').default),
+  mapProps(propsMap)
 )
 
-export default enhance(({ classes, post, posts, url }) =>
+export default enhance(({ isPost, classes, post, posts, url }) =>
   <Layout
     url={url}
-    post={post}
+    post={isPost && post}
     topBar={{
       title: 'Ben\'s Blog',
       className: classes.topBar
     }}>
-    {url.query.post && post
+    {isPost
       ? <Post post={post} />
       : <PostPreviewList posts={posts} />
     }
