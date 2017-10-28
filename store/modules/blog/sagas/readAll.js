@@ -3,7 +3,7 @@ import { all, call, put } from 'redux-saga/effects'
 import { pending, success, failure, error } from 'store/modules/async/actions'
 import { READ_ALL } from '../actionTypes'
 import { set } from '../actions'
-import { groupBy, compact } from 'lodash'
+import { compact } from 'lodash'
 
 export default function * (action) {
   try {

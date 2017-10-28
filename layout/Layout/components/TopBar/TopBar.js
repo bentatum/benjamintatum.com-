@@ -10,7 +10,7 @@ import Button from 'material-ui/Button'
 const enhance = withStyles(require('./style').default)
 
 export default enhance(
-  ({ className, children, classes, title, onMenuClick }) => (
+  ({ url, className, children, classes, title, onMenuClick }) => (
     <AppBar classes={{ root: className }} position='static' color='default'>
       <Toolbar>
         <div className={classes.iconTitleWrapper}>
@@ -23,13 +23,19 @@ export default enhance(
             </Typography>
           </If>
         </div>
-        <Button onClick={() => Router.push('/blog')}>
+        <Button
+          color={url.pathname === '/blog' ? 'primary' : 'inherit'}
+          onClick={() => Router.push('/blog')}>
           Blog
         </Button>
-        <Button onClick={() => Router.push('/about')}>
+        <Button
+          color={url.pathname === '/about' ? 'primary' : 'inherit'}
+          onClick={() => Router.push('/about')}>
           About
         </Button>
-        <Button onClick={() => Router.push('/resume')}>
+        <Button
+          color={url.pathname === '/resume' ? 'primary' : 'inherit'}
+          onClick={() => Router.push('/resume')}>
           Resume
         </Button>
       </Toolbar>

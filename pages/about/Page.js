@@ -3,7 +3,6 @@ import { Layout } from 'layout'
 import { withRedux } from 'lib'
 import { withMUI } from 'components'
 import { mapStore, getInitialProps } from './lib'
-import Typography from 'material-ui/Typography'
 import { setStatic, compose } from 'recompact'
 import { markdown } from 'markdown'
 import { withStyles } from 'material-ui/styles'
@@ -15,8 +14,8 @@ const enhance = compose(
   withMUI
 )
 
-export default enhance(({ classes, content }) =>
-  <Layout topBar={{ title: 'About Ben' }}>
+export default enhance(({ url, classes, content }) =>
+  <Layout topBar={{ url }}>
     <div dangerouslySetInnerHTML={{ __html: markdown.toHTML(content) }} />
     <div className={classes.imgContainer}>
       <div className={classes.imgWrapper}>

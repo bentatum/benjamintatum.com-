@@ -13,7 +13,9 @@ export default function * ({ payload }) {
   try {
     yield put(pending(REGISTER))
 
-    const { email, password, firstName, lastName, newsletter } = payload
+    const { email, password
+      // firstName, lastName, newsletter
+    } = payload
 
     const auth = firebase.auth()
     const signupRes = yield call(

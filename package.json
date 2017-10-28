@@ -1,5 +1,5 @@
 {
-  "name": "benjamintatum.com",
+  "name": "ben-tatum-web",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ben Tatum",
@@ -31,7 +31,7 @@
     "deploy": "now --public -e NODE_ENV=production",
     "predeploy": "jest",
     "test": "jest --watchAll",
-    "lint": "standard --fix"
+    "lint": "standard --fix '{components,config,layout,lib,pages,store,test,theme}/**/*.js'"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -39,6 +39,14 @@
       ".next",
       "node_modules",
       "*.test.js"
+    ],
+    "globals": [
+      "React",
+      "Otherwise",
+      "For",
+      "Choose",
+      "When",
+      "If"
     ]
   },
   "lint-staged": {
@@ -51,6 +59,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "standard": "^10.0.3"
   }
 }
