@@ -1,5 +1,5 @@
 
-import { Layout } from 'layout'
+import Layout from 'layout'
 import { withStyles } from 'material-ui/styles'
 import { mapProps, setStatic, compose } from 'recompact'
 import { withRedux } from 'lib'

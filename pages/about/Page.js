@@ -1,5 +1,5 @@
 
-import { Layout } from 'layout'
+import Layout from 'layout'
 import { withRedux } from 'lib'
 import { withMUI } from 'components'
 import { mapStore, getInitialProps } from './lib'

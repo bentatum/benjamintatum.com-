@@ -1,12 +1,8 @@
-import { red } from './colors'
-
 export const spacing = {
   unit: 5
 }
 
-export const palette = {
-  primary: red
-}
+export * as palette from './colors'
 
 export const overrides = {
   MuiListItemText: {

@@ -1,14 +1,26 @@
 export default theme => ({
+  root: {
+    height: 136,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column'
+  },
   title: {
-    flex: 1,
-    marginLeft: theme.spacing.unit
+    marginTop: theme.spacing.unit
   },
   img: {
     height: 42
   },
   iconTitleWrapper: {
-    flex: 1,
     display: 'flex',
-    alignItems: 'center'
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
+  more: {
+    // position: 'absolute',
+    // right: 0
   }
 })

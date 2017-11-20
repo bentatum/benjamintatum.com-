@@ -13,45 +13,9 @@ const enhance = compose(
 )
 
 export default enhance(({ meta, expandSalesMenu, salesMenuExpanded, user }) => (
-  <div>
-    {user && [
-      <List key={1}>
-        <ListItem button onClick={() => expandSalesMenu(!salesMenuExpanded)}>
-          <ListItemText primary='Sales' />
-        </ListItem>
-        <Collapse in={salesMenuExpanded}>
-          <NavItem
-            primary='Pending'
-            href='/sales?status=pending'
-            hrefAs='/sales/pending'
-            badgeContent={get(meta, 'salesAmounts.pending')}
-          />
-          <NavItem
-            primary='Approved'
-            href='/sales?status=approved'
-            hrefAs='/sales/approved'
-            badgeContent={get(meta, 'salesAmounts.approved')}
-          />
-          <NavItem
-            primary='Rejected'
-            href='/sales?status=rejected'
-            hrefAs='/sales/rejected'
-            badgeContent={get(meta, 'salesAmounts.rejected')}
-          />
-        </Collapse>
-      </List>,
-      <Divider key={2} />
-    ]}
-    <List>
-      {!user ? (
-        <ListItem button onClick={() => Router.push('/login')}>
-          <ListItemText primary='Login' />
-        </ListItem>
-      ) : (
-        <ListItem button onClick={() => Router.push('/logout')}>
-          <ListItemText primary='Logout' />
-        </ListItem>
-      )}
-    </List>
-  </div>
+  <List>
+    <ListItem component='a' href='mailto:bentatum@me.com'>
+      <ListItemText primary='Contact' />
+    </ListItem>
+  </List>
 ))

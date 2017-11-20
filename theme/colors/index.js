@@ -1,1 +1,2 @@
-export { default as red } from './red'
+export secondary from './red'
+export primary from './blue'

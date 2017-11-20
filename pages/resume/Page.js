@@ -1,5 +1,5 @@
 
-import { Layout } from 'layout'
+import Layout from 'layout'
 import { withMUI } from 'components'
 import Typography from 'material-ui/Typography'
 import Link from 'next/link'

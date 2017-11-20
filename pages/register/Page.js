@@ -1,5 +1,5 @@
 
-import { Layout } from 'layout'
+import Layout from 'layout'
 import { withRedux, withMUI } from 'components'
 import { withHandlers, compose } from 'recompact'
 import { Form } from './components'
