@@ -1,6 +1,6 @@
 export default theme => ({
   root: {
-    height: 136,
+    height: 180,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -11,6 +11,7 @@ export default theme => ({
   },
   img: {
     height: 42
+    // height: 82
   },
   iconTitleWrapper: {
     display: 'flex',

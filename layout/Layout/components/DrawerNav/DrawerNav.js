@@ -14,7 +14,7 @@ const enhance = compose(
 
 export default enhance(({ meta, expandSalesMenu, salesMenuExpanded, user }) => (
   <List>
-    <ListItem component='a' href='mailto:bentatum@me.com'>
+    <ListItem component='a' href='mailto:mail@benjtatum.com'>
       <ListItemText primary='Contact' />
     </ListItem>
   </List>

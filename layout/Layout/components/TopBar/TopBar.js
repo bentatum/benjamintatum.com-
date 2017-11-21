@@ -35,9 +35,9 @@ export default enhance(
             {title}
           </Typography>
         </If>
-        <div className={classes.more}>
-          <MoreIcon onClick={onMenuClick} />
-        </div>
+        <IconButton onClick={onMenuClick}>
+          <MoreIcon color='#fff' />
+        </IconButton>
       </Toolbar>
     </AppBar>
   )
