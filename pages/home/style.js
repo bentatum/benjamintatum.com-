@@ -1,7 +1,7 @@
 
 export default theme => ({
   post: {
-    height: 200,
+    height: 180,
     backgroundSize: 'cover',
     alignItems: 'center',
     justifyContent: 'center',
